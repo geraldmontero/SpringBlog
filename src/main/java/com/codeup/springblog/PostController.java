@@ -9,21 +9,23 @@ public class PostController {
     @GetMapping("/posts")
     @RequestMapping(path= "/posts", method = RequestMethod.GET)
     @ResponseBody
-    public String posts(){
+    public String postsIndex(){
         return "POST INDEX PAGE";
     }
 
     @RequestMapping(path= "/posts/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public String posts(@PathVariable String id){
+    public String Viewposts(@PathVariable String id){
         return "view post " + id;
     }
 
     @RequestMapping(path= "/posts/create", method = RequestMethod.GET)
     @ResponseBody
-    public String create(){
+    public String createPost(){
         return "Create form will be here";
     }
+
+
     @PostMapping("/posts/create")
     @ResponseBody
 
